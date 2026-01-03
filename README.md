@@ -1,90 +1,80 @@
-# Breast Cancer Classification – Coimbra Dataset (Machine Learning)
+# Breast Cancer Classification using Machine Learning  
+### Coimbra Dataset (UCI Machine Learning Repository)
 
-This project implements a **Machine Learning–based classification system** to predict the presence of **breast cancer** using the **Breast Cancer Coimbra Dataset** from the UCI Machine Learning Repository.
-
-The dataset consists of **anthropometric measurements and routine blood test parameters**, making it suitable for developing low-cost and non-invasive diagnostic support tools.
+## 📌 Overview
+This project implements a Machine Learning–based classification system to predict the presence of **breast cancer** using **anthropometric and routine blood test parameters**.  
+The aim is to assist in **early detection** using low-cost, non-invasive clinical features.
 
 ---
 
-## 📌 Project Description
+## 🎯 Problem Statement
+Breast cancer is one of the leading causes of mortality among women worldwide. Early diagnosis significantly improves treatment outcomes.
 
-Breast cancer is one of the leading causes of cancer-related mortality among women.  
-Early detection using accessible biomarkers can significantly improve treatment outcomes.
+This project formulates breast cancer detection as a **binary classification problem**, distinguishing between:
+- **Healthy individuals**
+- **Breast cancer patients**
 
-This project builds predictive models to classify individuals as:
-- **Healthy Control**
-- **Breast Cancer Patient**
-
-using physiological and biochemical features collected from routine clinical tests.
+using clinical and biochemical data.
 
 ---
 
 ## 📂 Dataset Information
-
 - **Dataset Name:** Breast Cancer Coimbra Dataset  
 - **Source:** UCI Machine Learning Repository  
-- **Dataset Link:**  
-  http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra  
+- **Link:** http://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Coimbra  
 
+### Dataset Summary
 - **Total Samples:** 116  
   - 64 Breast Cancer patients  
   - 52 Healthy controls  
-
-- **Number of Features:** 10 (all quantitative)
+- **Number of Features:** 10 (all numerical)
 
 ---
 
 ## 🔢 Predictive Features
-
-| Feature Name | Description | Unit |
-|-------------|------------|------|
-| Age | Age of the subject | years |
-| BMI | Body Mass Index | kg/m² |
-| Glucose | Plasma glucose concentration | mg/dL |
-| Insulin | Serum insulin | µU/mL |
-| HOMA | Homeostasis Model Assessment | – |
-| Leptin | Serum leptin | ng/mL |
-| Adiponectin | Serum adiponectin | µg/mL |
-| Resistin | Serum resistin | ng/mL |
-| MCP-1 | Monocyte Chemoattractant Protein-1 | pg/dL |
+- Age (years)  
+- BMI (kg/m²)  
+- Glucose (mg/dL)  
+- Insulin (µU/mL)  
+- HOMA  
+- Leptin (ng/mL)  
+- Adiponectin (µg/mL)  
+- Resistin (ng/mL)  
+- MCP-1 (pg/dL)
 
 ---
 
-## 🎯 Classification Labels
-
+## 🏷️ Target Variable
 - **1 → Healthy Control**
-- **2 → Cancer Patient**
+- **2 → Breast Cancer Patient**
 
-(Binary Classification Problem)
-
----
-
-## ⚙️ Technologies Used
-
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Seaborn
-- Scikit-learn
-- Jupyter Notebook
+(Binary Classification)
 
 ---
 
-## 🧠 Machine Learning Workflow
+## 🛠️ Technologies Used
+- Python  
+- NumPy  
+- Pandas  
+- Matplotlib  
+- Seaborn  
+- Scikit-learn  
+- Jupyter Notebook / Google Colab  
 
+---
+
+## 🔍 Machine Learning Workflow
 1. Data loading and inspection  
-2. Data preprocessing and normalization  
-3. Exploratory Data Analysis (EDA)  
+2. Exploratory Data Analysis (EDA)  
+3. Data preprocessing  
 4. Feature scaling  
 5. Model training  
-6. Performance evaluation  
-7. Result comparison  
+6. Model evaluation  
+7. Model comparison  
 
 ---
 
-## 🏗️ Models Implemented
-
+## 🧠 Models Implemented
 - Logistic Regression  
 - Support Vector Machine (SVM)  
 - K-Nearest Neighbors (KNN)  
@@ -94,9 +84,13 @@ using physiological and biochemical features collected from routine clinical tes
 ---
 
 ## 📊 Evaluation Metrics
+- Accuracy  
+- Precision  
+- Recall  
+- F1-Score  
+- Confusion Matrix  
 
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Confusion Matrix
+---
+
+## 📈 Results
+The best-performing model was Logistic Regression, with sensitivity and specificity of 83%. The top predictive features were Glucose, Age, Resistin, BMI, and Insulin. These results indicate that there is some relationship between obesity/metabolic disregulation and breast cancer, and that this model may be used as a biomarker of breast cancer.
